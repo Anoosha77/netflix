@@ -128,7 +128,7 @@ select {
   flex: 0 0 auto;
   width: 180px;
   height: 270px;
-  border-radius: 10px;
+  border-radius: 0px;
   overflow: visible; /* ⬅️ Allow content to overflow like the badge */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
@@ -139,14 +139,14 @@ select {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 10px;
+  border-radius: 20px;
   justify-content: center;
 }
 
 .movie-card:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
+  border-radius: 20px;
   z-index: 2;
   overflow: visible;  /* Ensure any overflow content still shows */
 }
