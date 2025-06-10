@@ -89,16 +89,40 @@
   </div>
 </section>
 
-  <!-- FAQ Section -->
-  <section class="faq-section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item"><button class="faq-question">What is Netflix?</button><div class="faq-answer"><p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more.</p></div></div>
-    <div class="faq-item"><button class="faq-question">How much does Netflix cost?</button><div class="faq-answer"><p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device for a fixed monthly fee.</p></div></div>
-    <div class="faq-item"><button class="faq-question">Where can I watch?</button><div class="faq-answer"><p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly.</p></div></div>
-    <div class="faq-item"><button class="faq-question">How do I cancel?</button><div class="faq-answer"><p>You can cancel your Netflix account anytime in your account settings.</p></div></div>
-    <div class="faq-item"><button class="faq-question">What can I watch on Netflix?</button><div class="faq-answer"><p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, and more.</p></div></div>
-    <div class="faq-item"><button class="faq-question">Is Netflix good for children?</button><div class="faq-answer"><p>The Netflix Kids experience includes parental controls and kid-friendly content.</p></div></div>
-  </section>
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">What is Netflix?</button>
+    <div class="faq-answer"><p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How much does Netflix cost?</button>
+    <div class="faq-answer"><p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device for a fixed monthly fee.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Where can I watch?</button>
+    <div class="faq-answer"><p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How do I cancel?</button>
+    <div class="faq-answer"><p>You can cancel your Netflix account anytime in your account settings.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What can I watch on Netflix?</button>
+    <div class="faq-answer"><p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, and more.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Is Netflix good for children?</button>
+    <div class="faq-answer"><p>The Netflix Kids experience includes parental controls and kid-friendly content.</p></div>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -122,5 +146,26 @@
     </select>
     <p class="region">Netflix Pakistan</p>
   </footer>
+  <script>
+  const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const isOpen = answer.style.maxHeight;
+
+      // Close all other answers
+      document.querySelectorAll('.faq-answer').forEach(a => {
+        a.style.maxHeight = null;
+      });
+
+      // Toggle current one
+      if (!isOpen) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
