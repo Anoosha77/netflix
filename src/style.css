@@ -17,7 +17,7 @@ body {
 .hero {
     position: relative;
     height: 100vh; /* Full viewport height */
-    background: rgba(0, 0, 0, 0.6) url('image.jpg') no-repeat center center;
+    background: rgba(0, 0, 0, 0.6) url('img/image.jpg') no-repeat center center;
     background-blend-mode: darken;
     background-size: cover;
     background-position: center;
@@ -115,10 +115,9 @@ select {
   gap: 12px;
   padding-bottom: 10px;
   scrollbar-width: none;
-}
+  justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
 
-.movie-row::-webkit-scrollbar {
-  display: none;
 }
 
 .movie-card {
