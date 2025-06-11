@@ -2,48 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Help Center</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help Center - StreamZone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #141414;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #000;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-bottom: 2px solid #e50914;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #e50914;
+      margin: 0;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #ffffff;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      border-left: 4px solid #e50914;
+      padding-left: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #cccccc;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.75rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    ul li::before {
+      content: '•';
+      color: #e50914;
+      position: absolute;
+      left: 0;
+    }
+
+    strong {
+      color: #ffffff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #000;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <section class="help-hero">
+
+  <header>
     <h1>Help Center</h1>
-    <input type="text" id="search" placeholder="Search help topics..." />
-  </section>
+  </header>
 
-  <section class="faq-category">
-    <h2>Account & Login</h2>
-    <div class="faq-item">
-      <button class="faq-question">How do I reset my password?</button>
-      <div class="faq-answer">Go to login > forgot password and follow the instructions.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">Can I use my account on multiple devices?</button>
-      <div class="faq-answer">Yes, up to 3 devices simultaneously depending on your plan.</div>
-    </div>
-  </section>
+  <main>
+    <section>
+      <h2>Getting Started</h2>
+      <p>Begin streaming your favorite content by following these steps:</p>
+      <ul>
+        <li>Create your account with a valid email.</li>
+        <li>Verify your email and log in to your dashboard.</li>
+        <li>Choose a subscription plan and start watching instantly.</li>
+      </ul>
+    </section>
 
-  <section class="contact-support">
-    <h2>Still Need Help?</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required/>
-      <input type="email" placeholder="Your Email" required/>
-      <textarea placeholder="Describe your issue..." required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+    <section>
+      <h2>FAQs</h2>
+      <p>Common questions answered below:</p>
+      <ul>
+        <li><strong>Q:</strong> How do I reset my password?<br /><strong>A:</strong> Click “Forgot Password” on the login screen and follow the steps.</li>
+        <li><strong>Q:</strong> Can I watch on multiple devices?<br /><strong>A:</strong> Yes! Depending on your plan, you can stream on 1–4 devices.</li>
+      </ul>
+    </section>
 
-  <script src="js/help.js"></script>
+    <section>
+      <h2>Troubleshooting</h2>
+      <p>Experiencing issues? Try these tips first:</p>
+      <ul>
+        <li>Check your internet connection and router.</li>
+        <li>Clear your browser/app cache.</li>
+        <li>Try logging out and logging back in.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <p>Still need help? We’re here for you:</p>
+      <ul>
+        <li>Email: support@streamzone.com</li>
+        <li>Phone: +1 800 999 9090</li>
+        <li>Live Chat: Available daily from 9am to 9pm</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 StreamZone Inc. All rights reserved.
+  </footer>
+
 </body>
-<script>// js/help.js
-const questions = document.querySelectorAll(".faq-question");
-
-questions.forEach(btn => {
-  btn.addEventListener("click", () => {
-    const answer = btn.nextElementSibling;
-    answer.style.display = answer.style.display === "block" ? "none" : "block";
-  });
-});
-</script>
 </html>
